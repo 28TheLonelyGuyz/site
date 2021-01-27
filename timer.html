@@ -2,8 +2,10 @@
 <head>
 <title>Test</title>
 <script>
-function startTimer(duration, display) {
+
+function setTimer(duration, display, stop) {
 	var timer = duration, minutes, seconds;
+	
 	setInterval(function() {
 		minutes = parseInt(timer / 60, 10);
 		seconds = parseInt(timer % 60, 10);
@@ -13,20 +15,25 @@ function startTimer(duration, display) {
 		
 		display.textContent = minutes + ":" + seconds;
 		
-		if (--timer < 0) {
-			timer = duration;
+		if (--timer < stop) {
+			timer = timer + 1;
 		}
 	}, 1000);
 }
 
-window.onload = function () {
-	var oneMinute = 60 * 1, display = document.querySelector('#time');
-	startTimer(oneMinute, display);
+window.onload = function() {
+	setTimer(5, document.querySelector('#timer'), 0);
 };
 
 </script>
 <body>
-<div>Registration closes in <span id="time">01:00</span> minutes!</div>
+
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="permanentMarker.css">
+<style> body {font-family: 'Permanent Marker', serif; font-size: 48px; text-shadow: 4px 4px 4px #aaa;} </style>
+
+<p style="text-align:center"><span id="timer">00:05</span></p>
+
 </body>
 </head>
 </html>
