@@ -1,0 +1,108 @@
+.button {
+	background-color: #000000;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+.square {
+	background-color: #000000;
+	border: none;
+	border-radius: 0px;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+.blue {
+	background-color: #16b5e9;
+	color: white;
+}
+.white {
+	background-color: #FFFFFF;
+	color: black;
+}
+.black {
+	background-color: #000000;
+	color: white;
+}
+
+.blueoutline {
+	border: 2px solid #16b5e9;
+}
+.whiteoutline {
+	border: 2px solid #FFFFFF;
+}
+.blackoutline {
+	border: 2px solid #000000;
+}
+
+.fadeoutlinewhite {
+	transition-duration: 0.2s;
+}.fadeoutlinewhite:hover {
+	border: 2px solid #FFFFFF;
+}
+.fadeoutlineblack {
+	transition-duration: 0.2s;
+}.fadeoutlineblack:hover {
+	border: 2px solid #000000;
+}
+
+.fadebutton {
+	transition-duration: 0.2s;
+}.fadebutton:hover {
+	background-color: white;
+	color: black;
+}
+.fadebuttontoblack {
+	transition-duration: 0.2s;
+}.fadebuttontoblack:hover {
+	background-color: black;
+	color: white;
+}
+
+.buttonshadow {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttonshadowWhenHover:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.animatedbutton {
+	display: inline-block;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	margin: 5px;
+}.animatedbutton span {
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}.animatedbutton span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -40px;
+	transition: 0.5s;
+}.animatedbutton:hover span {
+	padding-right: 35px;
+}.animatedbutton:hover span:after {
+	opacity: 1;
+	right: 0;
+}
